@@ -26,12 +26,13 @@ ClassRoom 2.0 je Android aplikacija kreirana u Jetpack Compose-u, osmišljena ka
 * Profesor unutar predmeta generiše QR kod koji **važi tačno 5 minuta**.
 * Podatak o vremenu se upisuje u bazu, što omogućava da kod ostane aktivan i validan za studente čak i ako se profesor u međuvremenu zaključa telefon ili se odjavi iz aplikacije.
 
-### 🏆 4. Live Kvizovi, E-Dnevnik i Rang Liste
+### 🏆 4. Live Kvizovi, E-Dnevnik i Rang Liste te Materijali
 * **Kreiranje kviza:** Profesor unosi naziv kviza, piše pitanja sa 4 ponuđena odgovora (od kojih je jedan tačan) i postavlja vremensko ograničenje.
 * **Rang lista:** Studenti rade kviz, a njihovi rezultati se u realnom vremenu šalju na zajedničku rang listu.
 * **E-Dnevnik (Profesor):** Ima uvid u statistiku studenta (broj urađenih kvizova, bodovi sa prethodnog kviza, ukupni bodovi). Profesor može direktno unijeti konačnu ocjenu, datum i komentar.
 * **E-Dnevnik (Student):** Student transparentno vidi sve svoje ostvarene bodove, ocjene i komentare koje mu je profesor dodijelio.
-
+* **Kartica Materijali:** Unutar svakog predmeta kreirana je posebna kartica namijenjena za pregled nastavnih materijala (poput prezentacija i dokumenata), koja služi kao predefinisani okvir za buduću nadogradnju sistema sa cloud bazom.
+  
 ### 🤖 5. Groq AI Asistent & Random Odabir
 * **Groq AI integracija:** Budući da ostali AI modeli (poput zvaničnog Gemini-ja) imaju geografska ograničenja u Bosni i Hercegovini, unutar aplikacije je uspješno integrisan **Groq API**. Služi kao pametni asistent za pomoć studentima pri učenju u realnom vremenu.
 * **Nasumičan odabir studenta:** Profesor ima funkciju "Random odabir" koja nasumično generiše i bira studenta sa predmeta za odgovaranje ili aktivnost.
