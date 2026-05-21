@@ -1,7 +1,7 @@
 # 🎓 ClassRoom 2.0 – Interactive Classroom Management Platform
 
 <p align="center">
-  <img src="screenshots/intro.jpg" width="220"/>
+  <img src="screenshots/intro.jpg" width="180"/>
 </p>
 
 <p align="center">
@@ -36,13 +36,13 @@ Students can:
 ## 🔐 Authentication & Onboarding
 
 <p align="center">
-  <img src="screenshots/intro.jpg" width="220"/>
-  <img src="screenshots/loginpage.jpg" width="220"/>
+  <img src="screenshots/intro.jpg" width="180"/>
+  <img src="screenshots/loginpage.jpg" width="180"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/registerPage.jpg" width="220"/>
-  <img src="screenshots/roleSelection.jpg" width="220"/>
+  <img src="screenshots/registerPage.jpg" width="180"/>
+  <img src="screenshots/roleSelection.jpg" width="180"/>
 </p>
 
 ---
@@ -50,13 +50,13 @@ Students can:
 ## 👨‍🏫 Dashboard Screens
 
 <p align="center">
-  <img src="screenshots/profesorDashBoard.jpg" width="220"/>
-  <img src="screenshots/StudentDashboard.jpg" width="220"/>
+  <img src="screenshots/profesorDashBoard.jpg" width="180"/>
+  <img src="screenshots/StudentDashboard.jpg" width="180"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/dashboard2.jpg" width="220"/>
-  <img src="screenshots/DashboardDark.jpg" width="220"/>
+  <img src="screenshots/dashboard2.jpg" width="180"/>
+  <img src="screenshots/DashboardDark.jpg" width="180"/>
 </p>
 
 ---
@@ -64,8 +64,8 @@ Students can:
 ## 📸 QR Attendance & Random Picker
 
 <p align="center">
-  <img src="screenshots/QRprisustvo.jpg" width="220"/>
-  <img src="screenshots/RandomPicker.jpg" width="220"/>
+  <img src="screenshots/QRprisustvo.jpg" width="180"/>
+  <img src="screenshots/RandomPicker.jpg" width="180"/>
 </p>
 
 ---
@@ -73,12 +73,12 @@ Students can:
 ## 🏆 Live Quiz & Rankings
 
 <p align="center">
-  <img src="screenshots/LiveQuy.jpg" width="220"/>
-  <img src="screenshots/RangList.jpg" width="220"/>
+  <img src="screenshots/LiveQuyj.jpg" width="180"/>
+  <img src="screenshots/RangList.jpg" width="180"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/E-dnevnik.jpg" width="220"/>
+  <img src="screenshots/E-dnevnik.jpg" width="180"/>
 </p>
 
 ---
@@ -86,12 +86,12 @@ Students can:
 ## 💬 Feedback & Profile
 
 <p align="center">
-  <img src="screenshots/Feedback.jpg" width="220"/>
-  <img src="screenshots/profilePage.jpg" width="220"/>
+  <img src="screenshots/Feedback.jpg" width="180"/>
+  <img src="screenshots/profilePage.jpg" width="180"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/profileDark.jpg" width="220"/>
+  <img src="screenshots/profileDark.jpg" width="180"/>
 </p>
 
 ---
@@ -99,7 +99,7 @@ Students can:
 ## 🤖 AI Assistant
 
 <p align="center">
-  <img src="screenshots/AlasistentLight.jpg" width="220"/>
+  <img src="screenshots/AlasistentLightj.jpg" width="180"/>
 </p>
 
 ---
@@ -139,10 +139,7 @@ Students can:
 - QR code validity: 5 minutes
 - Attendance records stored in Firebase Firestore
 - Real-time attendance confirmation
-- Works with:
-  - Google ML Kit
-  - QR Scanner
-  - Firebase synchronization
+- QR scanning implemented with Google ML Kit
 
 ---
 
@@ -169,7 +166,7 @@ Includes:
 
 ---
 
-## 🤖 AI Assistant
+## 🤖 Groq AI Assistant
 
 The application integrates the Groq API for AI-powered educational assistance.
 
@@ -323,7 +320,7 @@ Requirements:
 
 Steps:
 1. Open Android Studio
-2. Select **Open Project**
+2. Select Open Project
 3. Choose the project folder
 4. Wait for Gradle Sync
 
@@ -331,7 +328,7 @@ Steps:
 
 ## 3️⃣ Firebase Configuration
 
-To run the project, create your own Firebase project:
+To run the project, create your own Firebase project.
 
 ### Required Steps
 1. Open Firebase Console
@@ -359,6 +356,10 @@ OR
 Then click:
 ▶ Run
 
+### Registration Codes
+- Professor → `PROF2026`
+- Student → `STUD2026`
+
 ---
 
 # 🔮 Future Improvements
@@ -370,7 +371,6 @@ Planned upgrades:
 - Push notifications
 - Improved AI assistant
 - Advanced analytics
-- Full backend optimization
 - Better architecture separation
 
 ---
@@ -389,4 +389,3 @@ Built using:
 - Groq AI API
 
 ---
-
