@@ -1,238 +1,236 @@
-# 🎓 ClassRoom 2.0 – Interaktivna Platforma za Upravljanje Nastavom
+# 🎓 ClassRoom 2.0 – Interactive Classroom Management Platform
 
 <p align="center">
-  <img src="screenshots/intro.png" width="220"/>
+  <img src="screenshots/intro.jpg" width="220"/>
 </p>
 
 <p align="center">
-Modern Android aplikacija za digitalno upravljanje nastavom, QR prisustvo, live kvizove, AI asistenciju i interaktivno učenje u realnom vremenu.
+Modern Android application for digital classroom management, QR attendance tracking, live quizzes, AI assistance, and interactive real-time learning.
 </p>
 
 ---
 
-# 🚀 O Projektu
+# 🚀 About The Project
 
-ClassRoom 2.0 je Android aplikacija razvijena u Kotlinu koristeći Jetpack Compose, kreirana kao zatvoreni sistem za škole i fakultete.
+ClassRoom 2.0 is a modern Android application developed in Kotlin using Jetpack Compose, designed as a closed educational system for schools and universities.
 
-Aplikacija omogućava profesorima:
-- digitalno vođenje nastave,
-- QR evidenciju prisustva,
-- live kvizove,
-- pregled statistike i rezultata,
-- anonimni feedback studenata,
-- AI podršku tokom nastave.
+The application allows professors to:
+- manage classes digitally,
+- generate QR attendance sessions,
+- create live quizzes,
+- monitor student performance,
+- receive anonymous feedback,
+- use AI-powered teaching assistance.
 
-Studentima omogućava:
-- brzo prisustvo putem QR skeniranja,
-- interaktivne kvizove,
-- pregled ocjena i bodova,
-- AI pomoć pri učenju,
-- praćenje predmeta i zadataka.
+Students can:
+- check attendance using QR scanning,
+- participate in live quizzes,
+- track grades and points,
+- use AI learning assistance,
+- manage enrolled subjects and assignments.
 
 ---
 
 # 📱 Screenshots
 
-## 🔐 Autentifikacija i Uvod
+## 🔐 Authentication & Onboarding
 
 <p align="center">
-  <img src="screenshots/intro.png" width="220"/>
-  <img src="screenshots/loginpage.png" width="220"/>
-  <img src="screenshots/registerPage.png" width="220"/>
-  <img src="screenshots/roleSelection.png" width="220"/>
+  <img src="screenshots/intro.jpg" width="220"/>
+  <img src="screenshots/loginpage.jpg" width="220"/>
+  <img src="screenshots/registerPage.jpg" width="220"/>
+  <img src="screenshots/roleSelection.jpg" width="220"/>
 </p>
 
 ---
 
-## 👨‍🏫 Dashboard
+## 👨‍🏫 Dashboard Screens
 
 <p align="center">
-  <img src="screenshots/profesorDashBoard.png" width="220"/>
-  <img src="screenshots/StudentDashboard.png" width="220"/>
-  <img src="screenshots/dashboard2.png" width="220"/>
-  <img src="screenshots/DashboardDark.png" width="220"/>
+  <img src="screenshots/profesorDashBoard.jpg" width="220"/>
+  <img src="screenshots/StudentDashboard.jpg" width="220"/>
+  <img src="screenshots/dashboard2.jpg" width="220"/>
+  <img src="screenshots/DashboardDark.jpg" width="220"/>
 </p>
 
 ---
 
-## 📸 QR Prisustvo i Random Picker
+## 📸 QR Attendance & Random Picker
 
 <p align="center">
-  <img src="screenshots/QRprisustvo.png" width="220"/>
-  <img src="screenshots/RandomPicker.png" width="220"/>
+  <img src="screenshots/QRprisustvo.jpg" width="220"/>
+  <img src="screenshots/RandomPicker.jpg" width="220"/>
 </p>
 
 ---
 
-## 🏆 Live Kvizovi i Rang Liste
+## 🏆 Live Quiz & Rankings
 
 <p align="center">
-  <img src="screenshots/LiveQuy.png" width="220"/>
-  <img src="screenshots/RangList.png" width="220"/>
-  <img src="screenshots/E-dnevnik.png" width="220"/>
+  <img src="screenshots/LiveQuy.jpg" width="220"/>
+  <img src="screenshots/RangList.jpg" width="220"/>
+  <img src="screenshots/E-dnevnik.jpg" width="220"/>
 </p>
 
 ---
 
-## 💬 Feedback i Profil
+## 💬 Feedback & Profile
 
 <p align="center">
-  <img src="screenshots/Feedback.png" width="220"/>
-  <img src="screenshots/profilePage.png" width="220"/>
-  <img src="screenshots/profileDark.png" width="220"/>
+  <img src="screenshots/Feedback.jpg" width="220"/>
+  <img src="screenshots/profilePage.jpg" width="220"/>
+  <img src="screenshots/profileDark.jpg" width="220"/>
 </p>
 
 ---
 
-## 🤖 AI Asistent
+## 🤖 AI Assistant
 
 <p align="center">
-  <img src="screenshots/AlasistentLight.png" width="220"/>
+  <img src="screenshots/AlasistentLight.jpg" width="220"/>
 </p>
 
 ---
 
-# ✨ Glavne Funkcionalnosti
+# ✨ Main Features
 
-## 🔐 Registracija i Uloge
+## 🔐 Authentication & User Roles
 
-Prilikom registracije korisnik bira svoju ulogu unosom pristupnog koda ustanove:
+During registration, users select their role using a unique institution code:
 
-- Profesor → `PROF2026`
+- Professor → `PROF2026`
 - Student → `STUD2026`
 
-Aplikacija automatski pamti korisničku sesiju i omogućava automatsku prijavu pri ponovnom pokretanju aplikacije.
+The application automatically remembers the user session and supports automatic login on app restart.
 
 ---
 
-## 📚 Upravljanje Predmetima
+## 📚 Subject Management
 
-### Profesor može:
-- kreirati više predmeta,
-- generisati jedinstvene kodove predmeta,
-- brisati predmete,
-- upravljati studentima.
+### Professors can:
+- create multiple subjects,
+- generate unique subject codes,
+- delete subjects,
+- manage students.
 
-### Student može:
-- pridružiti se predmetu putem koda,
-- dodavati nove predmete,
-- pregledati aktivne predmete.
+### Students can:
+- join subjects using a code,
+- add new subjects,
+- view enrolled classes.
 
 ---
 
-## 📸 QR Prisustvo u Realnom Vremenu
+## 📸 Real-Time QR Attendance
 
-Profesor generiše QR kod koji traje 5 minuta.
+Professors generate QR codes valid for 5 minutes.
 
-Student:
-- skenira QR kod,
-- potvrđuje prisustvo,
-- automatski dobija evidenciju u sistemu.
+Students:
+- scan the QR code,
+- confirm attendance,
+- automatically receive attendance records.
 
-Sistem koristi:
+The system uses:
 - Google ML Kit,
 - Firebase Firestore,
-- vremensku validaciju QR sesije.
+- session expiration validation.
 
 ---
 
-## 🏆 Live Kvizovi & E-Dnevnik
+## 🏆 Live Quizzes & E-Diary
 
-Profesor može:
-- kreirati kvizove,
-- dodavati pitanja i odgovore,
-- pratiti rezultate u realnom vremenu.
+Professors can:
+- create quizzes,
+- add questions and answers,
+- monitor results in real time.
 
-Student može:
-- rješavati kvizove,
-- pratiti osvojene bodove,
-- pregledati rang listu i rezultate.
+Students can:
+- participate in quizzes,
+- track points,
+- view rankings and statistics.
 
-### E-Dnevnik omogućava:
-- pregled ocjena,
-- statistiku bodova,
-- komentare profesora,
-- pregled prethodnih aktivnosti.
-
----
-
-## 🤖 Groq AI Asistent
-
-Aplikacija koristi Groq API za AI pomoć studentima tokom učenja.
-
-AI asistent pomaže pri:
-- objašnjavanju pojmova,
-- učenju u realnom vremenu,
-- generisanju odgovora i pomoći tokom rada.
+### E-Diary includes:
+- grades overview,
+- quiz statistics,
+- professor comments,
+- activity history.
 
 ---
 
-## 📬 Zadaci, Feedback i Materijali
+## 🤖 Groq AI Assistant
 
-### Zadaci
-Profesor može:
-- dodati zadaću,
-- napisati naslov i opis,
-- obrisati zadatak.
+The application integrates the Groq API for AI-powered learning assistance.
 
-### Anonimni Feedback
-Student može poslati:
-- pohvalu,
-- prijedlog,
-- žalbu.
+The AI assistant helps students with:
+- explaining concepts,
+- answering questions,
+- learning support in real time.
 
-Feedback ostaje anoniman.
+---
 
-### Materijali
-UI za materijale je implementiran i spreman za buduću Firebase Storage integraciju.
+## 📬 Assignments, Feedback & Materials
+
+### Assignments
+Professors can:
+- create assignments,
+- add titles and descriptions,
+- delete assignments.
+
+### Anonymous Feedback
+Students can anonymously send:
+- compliments,
+- suggestions,
+- complaints.
+
+### Materials
+A dedicated materials section is already implemented in the UI and prepared for future Firebase Storage integration.
 
 ---
 
 # 🌙 Dark Mode
 
-Aplikacija podržava:
+The application fully supports:
 - Light Mode
 - Dark Mode
 
-Kompletan interfejs automatski se prilagođava tamnoj temi.
+The entire interface automatically adapts to the selected theme.
 
 ---
 
-# ⚠️ Napomena o Trenutnom Statusu Razvoja
+# ⚠️ Current Development Status
 
-## 🔐 Autentifikacija
-Google i Facebook prijava trenutno nisu u potpunosti funkcionalne. Sistem koristi internu Email/Password registraciju.
+## 🔐 Authentication
+Google and Facebook authentication are currently not fully functional. The system currently relies on internal Email/Password registration.
 
-## 📂 Upload fajlova
-Opcije za:
-- upload materijala,
-- slanje zadaća,
-- spremanje profilnih slika
+## 📂 File Uploads
+Features such as:
+- material uploads,
+- assignment submissions,
+- profile picture saving
 
-su trenutno samo vizuelno implementirane zbog nedostatka Firebase Storage sistema.
+are currently implemented only visually due to the lack of Firebase Storage integration.
 
-## 📚 Materijali
-Kartica "Materijali" je dizajnirana i spremna za buduću nadogradnju, ali trenutno ne povlači stvarne dokumente iz baze.
+## 📚 Materials
+The "Materials" tab is fully designed and prepared for future upgrades but currently does not fetch real documents from the server.
 
 ---
 
-# 🛠️ Tehnologije i Alati
+# 🛠️ Technologies & Tools
 
-| Tehnologija | Opis |
+| Technology | Purpose |
 |---|---|
-| Kotlin | Programski jezik |
-| Jetpack Compose | Moderni Android UI |
-| Firebase Firestore | Cloud baza podataka |
-| Firebase Authentication | Registracija i prijava |
-| Google ML Kit | QR skeniranje |
-| Groq API | AI Asistent |
-| Navigation Compose | Navigacija |
-| Material 3 | Moderni dizajn |
-| Coil | Učitavanje slika |
+| Kotlin | Programming Language |
+| Jetpack Compose | Modern Android UI |
+| Firebase Firestore | Cloud Database |
+| Firebase Authentication | Authentication |
+| Google ML Kit | QR Scanning |
+| Groq API | AI Assistant |
+| Navigation Compose | Navigation |
+| Material 3 | UI Design System |
+| Coil | Image Loading |
 
 ---
 
-# 🧱 Struktura Projekta
+# 🧱 Project Structure
 
 ```plaintext
 com.example.classroom20
@@ -247,13 +245,13 @@ com.example.classroom20
 └── managers
 ```
 
-> Projekat trenutno nema potpuno implementiranu MVVM arhitekturu kroz cijeli sistem. Kod je organizovan kroz screenove, helper klase i Firebase managere radi lakšeg održavanja i buduće nadogradnje.
+> The project currently does not fully implement MVVM architecture throughout the entire system. The codebase is organized using screens, helper classes, and Firebase managers to simplify maintenance and future scalability.
 
 ---
 
-# ⚙️ Pokretanje Projekta
+# ⚙️ Running The Project
 
-## 1️⃣ Kloniranje projekta
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/AminaHeljaa/ClassRoom-2.0.git
@@ -261,62 +259,63 @@ git clone https://github.com/AminaHeljaa/ClassRoom-2.0.git
 
 ---
 
-## 2️⃣ Otvaranje u Android Studiju
+## 2️⃣ Open in Android Studio
 
-- Android Studio Ladybug ili noviji
+- Android Studio Ladybug or newer
 - Open Project
-- Sačekati Gradle Sync
+- Wait for Gradle Sync
 
 ---
 
-## 3️⃣ Firebase konfiguracija
+## 3️⃣ Firebase Configuration
 
-Potrebno je:
-- kreirati Firebase projekat,
-- dodati Android aplikaciju,
-- preuzeti `google-services.json`,
-- ubaciti fajl u `app/` folder.
+You need to:
+- create a Firebase project,
+- register an Android application,
+- download `google-services.json`,
+- place the file inside the `app/` folder.
 
-### Omogućiti:
+### Enable:
 - Firebase Authentication
 - Firestore Database
 
 ---
 
-## 4️⃣ Pokretanje aplikacije
+## 4️⃣ Run The App
 
-- Pokrenuti emulator ili fizički uređaj
-- Kliknuti ▶ Run
+- Start an emulator or physical Android device
+- Click ▶ Run
 
-### Kodovi za registraciju:
-- Profesor → `PROF2026`
+### Registration Codes:
+- Professor → `PROF2026`
 - Student → `STUD2026`
 
 ---
 
-# 🔮 Buduće Nadogradnje
+# 🔮 Future Improvements
 
-Planirane funkcionalnosti:
-- Firebase Storage integracija
-- Upload PDF i PowerPoint materijala
-- Push notifikacije
-- Potpuna MVVM arhitektura
-- Google/Facebook autentifikacija
-- Statistika prisustva
-- Napredniji AI tutor sistem
+Planned features:
+- Firebase Storage integration
+- PDF & PowerPoint uploads
+- Push notifications
+- Full MVVM architecture
+- Google/Facebook authentication
+- Attendance analytics
+- Advanced AI tutoring system
 
 ---
 
-# 👩‍💻 Autor
+# 👩‍💻 Author
 
-Razvila:
+Developed by:
+
 ## Amina Helja
 
-Android aplikacija razvijena koristeći:
+Android application developed using:
 - Kotlin
 - Jetpack Compose
 - Firebase
-- Groq AI Integraciju
+- Groq AI Integration
 
 ---
 
