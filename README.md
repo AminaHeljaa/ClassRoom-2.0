@@ -73,7 +73,7 @@ Students can:
 ## 🏆 Live Quiz & Rankings
 
 <p align="center">
-  <img src="screenshots/LiveQuyj.jpg" width="180"/>
+  <img src="screenshots/LiveQuiy.jpg" width="180"/>
   <img src="screenshots/RangList.jpg" width="180"/>
 </p>
 
@@ -99,7 +99,7 @@ Students can:
 ## 🤖 AI Assistant
 
 <p align="center">
-  <img src="screenshots/AlasistentLightj.jpg" width="180"/>
+  <img src="screenshots/AlasistentLight.jpg" width="180"/>
 </p>
 
 ---
@@ -255,7 +255,6 @@ The Materials tab is visually completed and prepared for future backend integrat
 | Google ML Kit | QR Scanning |
 | Groq API | AI Assistant |
 | Navigation Compose | Navigation |
-| Coil | Image Loading |
 
 ---
 
@@ -389,3 +388,4 @@ Built using:
 - Groq AI API
 
 ---
+
