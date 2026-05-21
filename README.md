@@ -15,21 +15,19 @@ Modern Android aplikacija za digitalno upravljanje nastavom, QR prisustvo, live 
 ClassRoom 2.0 je Android aplikacija razvijena u Kotlinu koristeći Jetpack Compose, kreirana kao zatvoreni sistem za škole i fakultete.
 
 Aplikacija omogućava profesorima:
-
-* digitalno vođenje nastave,
-* QR evidenciju prisustva,
-* live kvizove,
-* pregled statistike i rezultata,
-* anonimni feedback studenata,
-* AI podršku tokom nastave.
+- digitalno vođenje nastave,
+- QR evidenciju prisustva,
+- live kvizove,
+- pregled statistike i rezultata,
+- anonimni feedback studenata,
+- AI podršku tokom nastave.
 
 Studentima omogućava:
-
-* brzo prisustvo putem QR skeniranja,
-* interaktivne kvizove,
-* pregled ocjena i bodova,
-* AI pomoć pri učenju,
-* praćenje predmeta i zadataka.
+- brzo prisustvo putem QR skeniranja,
+- interaktivne kvizove,
+- pregled ocjena i bodova,
+- AI pomoć pri učenju,
+- praćenje predmeta i zadataka.
 
 ---
 
@@ -46,7 +44,7 @@ Studentima omogućava:
 
 ---
 
-## 👨‍🏫 Profesor Dashboard & Student Dashboard
+## 👨‍🏫 Dashboard
 
 <p align="center">
   <img src="screenshots/profesorDashBoard.png" width="220"/>
@@ -57,7 +55,7 @@ Studentima omogućava:
 
 ---
 
-## 📸 QR Prisustvo i Random Odabir
+## 📸 QR Prisustvo i Random Picker
 
 <p align="center">
   <img src="screenshots/QRprisustvo.png" width="220"/>
@@ -76,12 +74,20 @@ Studentima omogućava:
 
 ---
 
-## 💬 Feedback & Profil
+## 💬 Feedback i Profil
 
 <p align="center">
   <img src="screenshots/Feedback.png" width="220"/>
   <img src="screenshots/profilePage.png" width="220"/>
   <img src="screenshots/profileDark.png" width="220"/>
+</p>
+
+---
+
+## 🤖 AI Asistent
+
+<p align="center">
+  <img src="screenshots/AlasistentLight.png" width="220"/>
 </p>
 
 ---
@@ -92,27 +98,25 @@ Studentima omogućava:
 
 Prilikom registracije korisnik bira svoju ulogu unosom pristupnog koda ustanove:
 
-* Profesor → `PROF2026`
-* Student → `STUD2026`
+- Profesor → `PROF2026`
+- Student → `STUD2026`
 
-Aplikacija automatski pamti sesiju korisnika i omogućava automatsku prijavu pri ponovnom pokretanju aplikacije.
+Aplikacija automatski pamti korisničku sesiju i omogućava automatsku prijavu pri ponovnom pokretanju aplikacije.
 
 ---
 
 ## 📚 Upravljanje Predmetima
 
 ### Profesor može:
-
-* kreirati više predmeta,
-* generisati jedinstvene kodove predmeta,
-* brisati predmete,
-* upravljati studentima.
+- kreirati više predmeta,
+- generisati jedinstvene kodove predmeta,
+- brisati predmete,
+- upravljati studentima.
 
 ### Student može:
-
-* pridružiti se predmetu putem koda,
-* dodavati nove predmete,
-* pregledati aktivne predmete.
+- pridružiti se predmetu putem koda,
+- dodavati nove predmete,
+- pregledati aktivne predmete.
 
 ---
 
@@ -121,39 +125,34 @@ Aplikacija automatski pamti sesiju korisnika i omogućava automatsku prijavu pri
 Profesor generiše QR kod koji traje 5 minuta.
 
 Student:
-
-* skenira QR kod,
-* potvrđuje prisustvo,
-* automatski dobija evidenciju u sistemu.
+- skenira QR kod,
+- potvrđuje prisustvo,
+- automatski dobija evidenciju u sistemu.
 
 Sistem koristi:
-
-* Google ML Kit,
-* Firebase Firestore,
-* vremensku validaciju QR sesije.
+- Google ML Kit,
+- Firebase Firestore,
+- vremensku validaciju QR sesije.
 
 ---
 
 ## 🏆 Live Kvizovi & E-Dnevnik
 
 Profesor može:
-
-* kreirati kvizove,
-* dodavati pitanja i odgovore,
-* pratiti rezultate u realnom vremenu.
+- kreirati kvizove,
+- dodavati pitanja i odgovore,
+- pratiti rezultate u realnom vremenu.
 
 Student može:
-
-* rješavati kvizove,
-* pratiti osvojene bodove,
-* pregledati rang listu i rezultate.
+- rješavati kvizove,
+- pratiti osvojene bodove,
+- pregledati rang listu i rezultate.
 
 ### E-Dnevnik omogućava:
-
-* pregled ocjena,
-* statistiku bodova,
-* komentare profesora,
-* pregled prethodnih aktivnosti.
+- pregled ocjena,
+- statistiku bodova,
+- komentare profesora,
+- pregled prethodnih aktivnosti.
 
 ---
 
@@ -162,35 +161,29 @@ Student može:
 Aplikacija koristi Groq API za AI pomoć studentima tokom učenja.
 
 AI asistent pomaže pri:
-
-* objašnjavanju pojmova,
-* učenju u realnom vremenu,
-* generisanju odgovora i pomoći tokom rada.
+- objašnjavanju pojmova,
+- učenju u realnom vremenu,
+- generisanju odgovora i pomoći tokom rada.
 
 ---
 
 ## 📬 Zadaci, Feedback i Materijali
 
 ### Zadaci
-
 Profesor može:
-
-* dodati zadaću,
-* napisati naslov i opis,
-* obrisati zadatak.
+- dodati zadaću,
+- napisati naslov i opis,
+- obrisati zadatak.
 
 ### Anonimni Feedback
-
 Student može poslati:
-
-* pohvalu,
-* prijedlog,
-* žalbu.
+- pohvalu,
+- prijedlog,
+- žalbu.
 
 Feedback ostaje anoniman.
 
 ### Materijali
-
 UI za materijale je implementiran i spreman za buduću Firebase Storage integraciju.
 
 ---
@@ -198,27 +191,44 @@ UI za materijale je implementiran i spreman za buduću Firebase Storage integrac
 # 🌙 Dark Mode
 
 Aplikacija podržava:
-
-* Light Mode
-* Dark Mode
+- Light Mode
+- Dark Mode
 
 Kompletan interfejs automatski se prilagođava tamnoj temi.
 
 ---
 
+# ⚠️ Napomena o Trenutnom Statusu Razvoja
+
+## 🔐 Autentifikacija
+Google i Facebook prijava trenutno nisu u potpunosti funkcionalne. Sistem koristi internu Email/Password registraciju.
+
+## 📂 Upload fajlova
+Opcije za:
+- upload materijala,
+- slanje zadaća,
+- spremanje profilnih slika
+
+su trenutno samo vizuelno implementirane zbog nedostatka Firebase Storage sistema.
+
+## 📚 Materijali
+Kartica "Materijali" je dizajnirana i spremna za buduću nadogradnju, ali trenutno ne povlači stvarne dokumente iz baze.
+
+---
+
 # 🛠️ Tehnologije i Alati
 
-| Tehnologija             | Opis                   |
-| ----------------------- | ---------------------- |
-| Kotlin                  | Programski jezik       |
-| Jetpack Compose         | Moderni Android UI     |
-| Firebase Firestore      | Cloud baza podataka    |
+| Tehnologija | Opis |
+|---|---|
+| Kotlin | Programski jezik |
+| Jetpack Compose | Moderni Android UI |
+| Firebase Firestore | Cloud baza podataka |
 | Firebase Authentication | Registracija i prijava |
-| Google ML Kit           | QR skeniranje          |
-| Groq API                | AI Asistent            |
-| Navigation Compose      | Navigacija             |
-| Material 3              | Moderni dizajn         |
-| Coil                    | Učitavanje slika       |
+| Google ML Kit | QR skeniranje |
+| Groq API | AI Asistent |
+| Navigation Compose | Navigacija |
+| Material 3 | Moderni dizajn |
+| Coil | Učitavanje slika |
 
 ---
 
@@ -241,16 +251,6 @@ com.example.classroom20
 
 ---
 
-# ⚠️ Trenutna Ograničenja
-
-* Google/Facebook login nije potpuno funkcionalan
-* Firebase Storage još nije implementiran
-* Upload fajlova trenutno nema trajno cloud spremanje
-* Profilne slike su samo UI funkcionalnost
-* Materijali trenutno ne povlače stvarne dokumente
-
----
-
 # ⚙️ Pokretanje Projekta
 
 ## 1️⃣ Kloniranje projekta
@@ -263,69 +263,60 @@ git clone https://github.com/AminaHeljaa/ClassRoom-2.0.git
 
 ## 2️⃣ Otvaranje u Android Studiju
 
-* Android Studio Ladybug ili noviji
-* Open Project
-* Sačekati Gradle Sync
+- Android Studio Ladybug ili noviji
+- Open Project
+- Sačekati Gradle Sync
 
 ---
 
 ## 3️⃣ Firebase konfiguracija
 
 Potrebno je:
-
-* kreirati Firebase projekat,
-* dodati Android aplikaciju,
-* preuzeti `google-services.json`,
-* ubaciti fajl u `app/` folder.
+- kreirati Firebase projekat,
+- dodati Android aplikaciju,
+- preuzeti `google-services.json`,
+- ubaciti fajl u `app/` folder.
 
 ### Omogućiti:
-
-* Firebase Authentication
-* Firestore Database
+- Firebase Authentication
+- Firestore Database
 
 ---
 
 ## 4️⃣ Pokretanje aplikacije
 
-* Pokrenuti emulator ili fizički uređaj
-* Kliknuti ▶ Run
+- Pokrenuti emulator ili fizički uređaj
+- Kliknuti ▶ Run
 
 ### Kodovi za registraciju:
-
-* Profesor → `PROF2026`
-* Student → `STUD2026`
+- Profesor → `PROF2026`
+- Student → `STUD2026`
 
 ---
 
 # 🔮 Buduće Nadogradnje
 
 Planirane funkcionalnosti:
-
-* Firebase Storage integracija
-* Upload PDF i PowerPoint materijala
-* Push notifikacije
-* Potpuna MVVM arhitektura
-* Google/Facebook autentifikacija
-* Statistika prisustva
-* Napredniji AI tutor sistem
+- Firebase Storage integracija
+- Upload PDF i PowerPoint materijala
+- Push notifikacije
+- Potpuna MVVM arhitektura
+- Google/Facebook autentifikacija
+- Statistika prisustva
+- Napredniji AI tutor sistem
 
 ---
 
 # 👩‍💻 Autor
 
 Razvila:
+## Amina Helja
 
-### **Amina Helja**
-
-Android aplikacija razvijena kao projekat koristeći:
-
-* Kotlin
-* Jetpack Compose
-* Firebase
-* Groq AI Integraciju
+Android aplikacija razvijena koristeći:
+- Kotlin
+- Jetpack Compose
+- Firebase
+- Groq AI Integraciju
 
 ---
 
-# 📄 Licenca
-
-MIT License
