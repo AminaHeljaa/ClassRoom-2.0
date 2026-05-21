@@ -75,9 +75,6 @@ Students can:
 <p align="center">
   <img src="screenshots/LiveQuiy.jpg" width="180"/>
   <img src="screenshots/RangList.jpg" width="180"/>
-</p>
-
-<p align="center">
   <img src="screenshots/E-dnevnik.jpg" width="180"/>
 </p>
 
@@ -88,9 +85,6 @@ Students can:
 <p align="center">
   <img src="screenshots/Feedback.jpg" width="180"/>
   <img src="screenshots/profilePage.jpg" width="180"/>
-</p>
-
-<p align="center">
   <img src="screenshots/profileDark.jpg" width="180"/>
 </p>
 
