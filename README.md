@@ -93,7 +93,7 @@ Students can:
 ## 🤖 AI Assistant
 
 <p align="center">
-  <img src="./screenshots/AlasistentLight.jpg" width="180"/>
+  <img src="screenshots/AIasistentLight.jpg" width="180"/>
 </p>
 
 ---
@@ -233,6 +233,7 @@ are visually implemented in the UI but currently lack Firebase Storage integrati
 ---
 
 ## 📚 Materials Section
+
 The Materials tab is visually completed and prepared for future backend integration but currently does not fetch real files from the server.
 
 ---
@@ -324,6 +325,7 @@ Steps:
 To run the project, create your own Firebase project.
 
 ### Required Steps
+
 1. Open Firebase Console
 2. Create a new project
 3. Add Android application
@@ -350,6 +352,7 @@ Then click:
 ▶ Run
 
 ### Registration Codes
+
 - Professor → `PROF2026`
 - Student → `STUD2026`
 
