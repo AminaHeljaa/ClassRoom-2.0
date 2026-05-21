@@ -70,7 +70,7 @@ Students can:
 
 ---
 
-## 🏆 Live Quiz & Rankings
+## 🏆 Live Quiz, Rankings & E-Diary
 
 <p align="center">
   <img src="screenshots/LiveQuiy.jpg" width="180"/>
@@ -93,7 +93,7 @@ Students can:
 ## 🤖 AI Assistant
 
 <p align="center">
-  <img src="screenshots/AlasistentLight.jpg" width="180"/>
+  <img src="./screenshots/AlasistentLight.jpg" width="180"/>
 </p>
 
 ---
