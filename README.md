@@ -5,29 +5,29 @@
 </p>
 
 <p align="center">
-Modern Android application for digital classroom management, QR attendance tracking, live quizzes, AI assistance, and interactive real-time learning.
+Modern Android classroom platform built with Jetpack Compose, Firebase, QR attendance, live quizzes, AI assistance, and real-time student interaction.
 </p>
 
 ---
 
 # 🚀 About The Project
 
-ClassRoom 2.0 is a modern Android application developed in Kotlin using Jetpack Compose, designed as a closed educational system for schools and universities.
+ClassRoom 2.0 is a modern Android application developed in Kotlin using Jetpack Compose, designed as a digital classroom management system for schools and universities.
 
-The application allows professors to:
-- manage classes digitally,
-- generate QR attendance sessions,
-- create live quizzes,
+The application enables professors to:
+- manage subjects digitally,
+- create QR attendance sessions,
+- launch live quizzes,
 - monitor student performance,
 - receive anonymous feedback,
-- use AI-powered teaching assistance.
+- use AI-powered learning assistance.
 
 Students can:
-- check attendance using QR scanning,
+- scan QR attendance,
 - participate in live quizzes,
-- track grades and points,
-- use AI learning assistance,
-- manage enrolled subjects and assignments.
+- view grades and statistics,
+- communicate anonymously through feedback,
+- access assignments and course materials.
 
 ---
 
@@ -38,6 +38,9 @@ Students can:
 <p align="center">
   <img src="screenshots/intro.jpg" width="220"/>
   <img src="screenshots/loginpage.jpg" width="220"/>
+</p>
+
+<p align="center">
   <img src="screenshots/registerPage.jpg" width="220"/>
   <img src="screenshots/roleSelection.jpg" width="220"/>
 </p>
@@ -49,6 +52,9 @@ Students can:
 <p align="center">
   <img src="screenshots/profesorDashBoard.jpg" width="220"/>
   <img src="screenshots/StudentDashboard.jpg" width="220"/>
+</p>
+
+<p align="center">
   <img src="screenshots/dashboard2.jpg" width="220"/>
   <img src="screenshots/DashboardDark.jpg" width="220"/>
 </p>
@@ -69,6 +75,9 @@ Students can:
 <p align="center">
   <img src="screenshots/LiveQuy.jpg" width="220"/>
   <img src="screenshots/RangList.jpg" width="220"/>
+</p>
+
+<p align="center">
   <img src="screenshots/E-dnevnik.jpg" width="220"/>
 </p>
 
@@ -79,6 +88,9 @@ Students can:
 <p align="center">
   <img src="screenshots/Feedback.jpg" width="220"/>
   <img src="screenshots/profilePage.jpg" width="220"/>
+</p>
+
+<p align="center">
   <img src="screenshots/profileDark.jpg" width="220"/>
 </p>
 
@@ -92,125 +104,145 @@ Students can:
 
 ---
 
-# ✨ Main Features
+# ✨ Features
 
-## 🔐 Authentication & User Roles
+## 🔐 Authentication & Smart Session Persistence
 
-During registration, users select their role using a unique institution code:
-
-- Professor → `PROF2026`
-- Student → `STUD2026`
-
-The application automatically remembers the user session and supports automatic login on app restart.
+- Internal Email/Password registration system
+- Separate Professor and Student roles
+- Institution access codes:
+  - Professor → `PROF2026`
+  - Student → `STUD2026`
+- Automatic session persistence
+- Automatic login after reopening the app
 
 ---
 
 ## 📚 Subject Management
 
 ### Professors can:
-- create multiple subjects,
+- create subjects,
 - generate unique subject codes,
 - delete subjects,
-- manage students.
+- manage classroom access.
 
 ### Students can:
-- join subjects using a code,
-- add new subjects,
-- view enrolled classes.
+- join subjects using a generated code,
+- enroll in multiple classes,
+- access their classroom dashboard.
 
 ---
 
 ## 📸 Real-Time QR Attendance
 
-Professors generate QR codes valid for 5 minutes.
-
-Students:
-- scan the QR code,
-- confirm attendance,
-- automatically receive attendance records.
-
-The system uses:
-- Google ML Kit,
-- Firebase Firestore,
-- session expiration validation.
+- Professors generate QR attendance sessions
+- QR code validity: 5 minutes
+- Attendance records stored in Firebase Firestore
+- Real-time attendance confirmation
+- Works with:
+  - Google ML Kit
+  - QR Scanner
+  - Firebase synchronization
 
 ---
 
 ## 🏆 Live Quizzes & E-Diary
 
+### Quiz System
 Professors can:
 - create quizzes,
-- add questions and answers,
-- monitor results in real time.
+- add questions with 4 answers,
+- define correct answers,
+- set quiz duration.
 
 Students can:
-- participate in quizzes,
-- track points,
-- view rankings and statistics.
+- solve quizzes live,
+- receive points instantly,
+- view leaderboard rankings.
 
-### E-Diary includes:
-- grades overview,
+### E-Diary
+Includes:
+- grades,
 - quiz statistics,
 - professor comments,
-- activity history.
+- performance history.
 
 ---
 
-## 🤖 Groq AI Assistant
+## 🤖 AI Assistant
 
-The application integrates the Groq API for AI-powered learning assistance.
+The application integrates the Groq API for AI-powered educational assistance.
 
-The AI assistant helps students with:
-- explaining concepts,
+Students can:
+- ask learning-related questions,
+- receive explanations,
+- improve understanding in real time.
+
+Implementation:
+- `GeminiManager.kt`
+
+---
+
+## 🎲 Random Student Picker
+
+Professors can randomly select a student for:
 - answering questions,
-- learning support in real time.
+- classroom participation,
+- activities and presentations.
 
 ---
 
-## 📬 Assignments, Feedback & Materials
+## 📬 Assignments, Materials & Anonymous Feedback
 
-### Assignments
+### Homework
 Professors can:
 - create assignments,
-- add titles and descriptions,
-- delete assignments.
+- add descriptions,
+- manage homework tasks.
 
 ### Anonymous Feedback
 Students can anonymously send:
 - compliments,
-- suggestions,
-- complaints.
+- complaints,
+- suggestions.
 
 ### Materials
-A dedicated materials section is already implemented in the UI and prepared for future Firebase Storage integration.
+A dedicated Materials screen already exists in the UI and is prepared for future Firebase Storage integration.
 
 ---
 
 # 🌙 Dark Mode
 
 The application fully supports:
-- Light Mode
-- Dark Mode
+- Light Theme
+- Dark Theme
 
-The entire interface automatically adapts to the selected theme.
+All screens dynamically adapt to the selected appearance mode.
 
 ---
 
 # ⚠️ Current Development Status
 
 ## 🔐 Authentication
-Google and Facebook authentication are currently not fully functional. The system currently relies on internal Email/Password registration.
+Google and Facebook authentication are currently unfinished and temporarily disabled.
 
-## 📂 File Uploads
+The system currently relies on internal Email/Password authentication.
+
+---
+
+## 📂 File Upload Limitations
+
 Features such as:
-- material uploads,
-- assignment submissions,
-- profile picture saving
+- uploading documents,
+- profile image saving,
+- assignment file submissions
 
-are currently implemented only visually due to the lack of Firebase Storage integration.
+are visually implemented in the UI but currently lack Firebase Storage integration.
 
-## 📚 Materials
-The "Materials" tab is fully designed and prepared for future upgrades but currently does not fetch real documents from the server.
+---
+
+## 📚 Materials Section
+The Materials tab is visually completed and prepared for future backend integration but currently does not fetch real files from the server.
 
 ---
 
@@ -220,12 +252,12 @@ The "Materials" tab is fully designed and prepared for future upgrades but curre
 |---|---|
 | Kotlin | Programming Language |
 | Jetpack Compose | Modern Android UI |
+| Material 3 | UI Design System |
 | Firebase Firestore | Cloud Database |
-| Firebase Authentication | Authentication |
+| Firebase Authentication | User Authentication |
 | Google ML Kit | QR Scanning |
 | Groq API | AI Assistant |
 | Navigation Compose | Navigation |
-| Material 3 | UI Design System |
 | Coil | Image Loading |
 
 ---
@@ -235,17 +267,41 @@ The "Materials" tab is fully designed and prepared for future upgrades but curre
 ```plaintext
 com.example.classroom20
 │
-├── screens
-├── navigation
-├── components
-├── models
-├── firebase
-├── utils
-├── ui.theme
-└── managers
+├── data
+│   ├── FirebaseManager
+│   ├── GeminiManager
+│   └── Models.kt
+│
+├── ui
+│   ├── components
+│   ├── navigation
+│   ├── screens
+│   │   ├── AIAssistantScreen.kt
+│   │   ├── AttendanceConfirmedScreen.kt
+│   │   ├── CreateQuizScreen.kt
+│   │   ├── DashboardScreen.kt
+│   │   ├── FeedbackScreen.kt
+│   │   ├── GradesScreen.kt
+│   │   ├── HomeworkScreen.kt
+│   │   ├── IntroScreen.kt
+│   │   ├── LeaderboardScreen.kt
+│   │   ├── LiveQuizScreen.kt
+│   │   ├── LoginScreen.kt
+│   │   ├── MaterialsScreen.kt
+│   │   ├── ProfileScreen.kt
+│   │   ├── QRAttendanceScreen.kt
+│   │   ├── RandomPickerScreen.kt
+│   │   ├── RegisterScreen.kt
+│   │   ├── RoleSelectionScreen.kt
+│   │   └── SubjectsScreen.kt
+│   │
+│   └── theme
+│
+├── util
+│   └── Localization.kt
+│
+└── MainActivity.kt
 ```
-
-> The project currently does not fully implement MVVM architecture throughout the entire system. The codebase is organized using screens, helper classes, and Firebase managers to simplify maintenance and future scalability.
 
 ---
 
@@ -261,19 +317,32 @@ git clone https://github.com/AminaHeljaa/ClassRoom-2.0.git
 
 ## 2️⃣ Open in Android Studio
 
+Requirements:
 - Android Studio Ladybug or newer
-- Open Project
-- Wait for Gradle Sync
+- Gradle synchronization enabled
+
+Steps:
+1. Open Android Studio
+2. Select **Open Project**
+3. Choose the project folder
+4. Wait for Gradle Sync
 
 ---
 
 ## 3️⃣ Firebase Configuration
 
-You need to:
-- create a Firebase project,
-- register an Android application,
-- download `google-services.json`,
-- place the file inside the `app/` folder.
+To run the project, create your own Firebase project:
+
+### Required Steps
+1. Open Firebase Console
+2. Create a new project
+3. Add Android application
+4. Download `google-services.json`
+5. Place the file inside:
+
+```plaintext
+app/google-services.json
+```
 
 ### Enable:
 - Firebase Authentication
@@ -281,27 +350,28 @@ You need to:
 
 ---
 
-## 4️⃣ Run The App
+## 4️⃣ Run The Application
 
-- Start an emulator or physical Android device
-- Click ▶ Run
+- Connect a physical Android device
+OR
+- Start an Android Emulator
 
-### Registration Codes:
-- Professor → `PROF2026`
-- Student → `STUD2026`
+Then click:
+▶ Run
 
 ---
 
 # 🔮 Future Improvements
 
-Planned features:
+Planned upgrades:
 - Firebase Storage integration
-- PDF & PowerPoint uploads
-- Push notifications
-- Full MVVM architecture
+- PDF & presentation uploads
 - Google/Facebook authentication
-- Attendance analytics
-- Advanced AI tutoring system
+- Push notifications
+- Improved AI assistant
+- Advanced analytics
+- Full backend optimization
+- Better architecture separation
 
 ---
 
@@ -311,11 +381,12 @@ Developed by:
 
 ## Amina Helja
 
-Android application developed using:
+Built using:
 - Kotlin
 - Jetpack Compose
 - Firebase
-- Groq AI Integration
+- Material 3
+- Groq AI API
 
 ---
 
