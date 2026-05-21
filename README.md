@@ -1,102 +1,331 @@
-# 🎓 ClassRoom 2.0 - Interaktivna Platforma za Upravljanje Nastavom
+# 🎓 ClassRoom 2.0 – Interaktivna Platforma za Upravljanje Nastavom
 
-ClassRoom 2.0 je Android aplikacija kreirana u Jetpack Compose-u, osmišljena kao zatvoreni sistem za jednu školu. Aplikacija omogućava profesorima digitalno vođenje nastave, generisanje QR prisustva, kreiranje kvizova uživo i uvid u anonimne povratne informacije, dok studentima pruža prostor za praćenje nastave i interaktivno učenje uz AI asistenciju.
+<p align="center">
+  <img src="screenshots/intro.png" width="220"/>
+</p>
 
----
-
-## 🛠️ Napomena o statusu razvoja (Pročitati prije pokretanja!)
-* **Autentifikacija:** Integracija sa Google i Facebook prijavom je trenutno u zastoju (steka) i nije u potpunosti funkcionalna. Sistem se oslanja na internu registraciju. Korisnik se ne može prijaviti prije nego što se uspješno registruje unutar aplikacije.
-* **Ograničenja baze podataka:** Zbog trenutnog nedostatka namjenskog cloud skladišta (Storage/Baza za fajlove), opcije za *upload materijala (prezentacija/dokumenata)*, *prilaganje zadaća od strane studenata* i *spasavanje profilne slike* su vizuelno implementirane u UI-ju, ali nemaju pozadinsku bazu za trajno čuvanje fajlova. **Isti slučaj je i sa posebnom karticom za "Materijale" unutar predmeta, koja je dizajnirana i spremna u interfejsu, ali trenutno ne povlači prave datoteke sa servera.**
-
----
-
-## 🚀 Funkcionalnosti Aplikacije
-
-### 🔐 1. Registracija, Uloge i Pametno Pamćenje Sesije
-* **Pristupni kodovi škole:** Prilikom prve registracije, korisnik unosi svoje podatke i bira ulogu unosom jedinstvenog koda ustanove:
-  * Profesor pristupa aplikaciji uz kod: **`PROF2026`**
-  * Student pristupa aplikaciji uz kod: **`STUD2026`**
-* **Automatska prijava (Session Persistence):** Nakon što se jednom prijavi i izabere ulogu, aplikacija pamti korisnika. Prilikom ponovnog pokretanja, sistem automatski prepoznaje da li je u pitanju student ili profesor, preskačući ekrane za odabir uloge i ponovnu prijavu.
-
-### 📚 2. Upravljanje Predmetima (Navigaciona Traka)
-* **Profesor dashboard:** Može kreirati jedan ili više predmeta, a aplikacija za svaki predmet generiše **nasumični jedinstveni kod**. Profesor takođe ima mogućnost brisanja predmeta.
-* **Student dashboard:** Student se na predmete povezuje tako što unosi kod predmeta koji je dobio od profesora. Kroz navigaciju na stranici predmeta, student može na osnovu novih kodova dodavati još predmeta u svoj raspored.
-
-### 📸 3. Pametno QR Prisustvo u Realnom Vremenu
-* Profesor unutar predmeta generiše QR kod koji **važi tačno 5 minuta**.
-* Podatak o vremenu se upisuje u bazu, što omogućava da kod ostane aktivan i validan za studente čak i ako se profesor u međuvremenu odjavi iz aplikacije ili zaključa telefon. Student ima tačno 5 minuta da skenira kod.
-
-### 🏆 4. Live Kvizovi, E-Dnevnik i Rang Liste
-* **Kreiranje kviza:** Profesor unosi naziv kviza, piše pitanja sa 4 ponuđena odgovora (od kojih je jedan tačan) i postavlja vremensko ograničenje za rad.
-* **Rang lista:** Studenti rade kviz, a njihovi rezultati se u realnom vremenu šalju na zajedničku rang listu kako bi profesor imao uvid u to koliko je ko bodova ostvario.
-* **E-Dnevnik (Profesor):** Ima uvid u statistiku studenta (koliko je ukupno kvizova uradio, bodovi sa prethodnog kviza, ukupni bodovi). Profesor može direktno unijeti konačnu ocjenu, datum i komentar.
-* **E-Dnevnik (Student):** Student transparentno u svom e-dnevniku vidi sve svoje ostvarene bodove na kvizovima, ocjene i komentare koje mu je profesor dodijelio.
-
-### 🤖 5. Groq AI Asistent & Random Odabir
-* **Groq AI integracija:** Budući da ostali AI modeli (poput zvaničnog Gemini-ja) imaju geografska ograničenja u Bosni i Hercegovini, unutar aplikacije je uspješno integrisan **Groq API** (preuzet sa Groq stranice). Služi kao pametni asistent za pomoć studentima pri učenju u realnom vremenu.
-* **Nasumičan odabir studenta:** Profesor ima funkciju "Random odabir" koja nasumično generiše i bira studenta sa predmeta za odgovaranje ili aktivnost na času.
-
-### 📬 6. Anonimni Feedback, Zadaci & Materijali
-* **Zadaće:** Profesor može dodijeliti zadaću za određeni predmet (piše naslov i detaljan opis) i obrisati je po potrebi. Zadaća se odmah prikazuje studentu (uz napomenu o nedostatku baze za slanje fajlova sa studentske strane).
-* **Anonimne pohvale i žalbe:** Student može napisati feedback za profesora koji se sastoji od pohvale i žalbe. Ove poruke stižu profesoru potpuno **anonimno**, omogućavajući iskrenu i bezbjednu evaluaciju nastave.
-* **Kartica Materijali:** Unutar svakog predmeta kreirana je posebna kartica namijenjena za pregled nastavnih materijala (poput prezentacija i dokumenata), koja služi kao spremna UI struktura za buduću nadogradnju sistema.
-
-### 🎨 7. Korisnički Profil & Tamni Režim (Dark Mode)
-* **Uređivanje profila:** Korisnik kroz profilnu karticu može izmijeniti svoje ime (opcija za dodavanje profilne slike je vizuelno spremna u UI-ju).
-* **Kompletan Dark Mode:** Kroz navigaciju i profil je omogućen prelazak na tamni režim rada, pri čemu se kompletan vizuelni interfejs svih stranica unutar aplikacije prilagođava tamnoj temi za ugodniji rad noću.
+<p align="center">
+Modern Android aplikacija za digitalno upravljanje nastavom, QR prisustvo, live kvizove, AI asistenciju i interaktivno učenje u realnom vremenu.
+</p>
 
 ---
 
-## 🛠️ Tehnologije i Alati
+# 🚀 O Projektu
 
-* **Programski jezik:** Kotlin
-* **UI Framework:** Jetpack Compose (Moderni deklarativni UI sa podrškom za Light/Dark teme)
-* **Arhitektura:** MVVM (Model-View-ViewModel)
-* **Baza podataka:** Firebase Firestore (za tekstualne podatke, kvizove, ocjene i QR sesije)
-* **Skeniranje:** Google ML Kit Code Scanner
-* **AI Integracija:** Groq API Key (implementiran u `GeminiManager.kt`)
+ClassRoom 2.0 je Android aplikacija razvijena u Kotlinu koristeći Jetpack Compose, kreirana kao zatvoreni sistem za škole i fakultete.
+
+Aplikacija omogućava profesorima:
+
+* digitalno vođenje nastave,
+* QR evidenciju prisustva,
+* live kvizove,
+* pregled statistike i rezultata,
+* anonimni feedback studenata,
+* AI podršku tokom nastave.
+
+Studentima omogućava:
+
+* brzo prisustvo putem QR skeniranja,
+* interaktivne kvizove,
+* pregled ocjena i bodova,
+* AI pomoć pri učenju,
+* praćenje predmeta i zadataka.
 
 ---
 
-## ⚙️ Kako pokrenuti aplikaciju lokalno
+# 📱 Screenshots
 
-Da biste uspješno pokrenuli aplikaciju na svom računaru, pratite sljedeće korake:
+## 🔐 Autentifikacija i Uvod
 
-### 1. Klonirajte repozitorij
-Kopirajte ovu komandu u vaš terminal kako biste preuzeli izvorni kod projekta:
+<p align="center">
+  <img src="screenshots/intro.png" width="220"/>
+  <img src="screenshots/loginpage.png" width="220"/>
+  <img src="screenshots/registerPage.png" width="220"/>
+  <img src="screenshots/roleSelection.png" width="220"/>
+</p>
+
+---
+
+## 👨‍🏫 Profesor Dashboard & Student Dashboard
+
+<p align="center">
+  <img src="screenshots/profesorDashBoard.png" width="220"/>
+  <img src="screenshots/StudentDashboard.png" width="220"/>
+  <img src="screenshots/dashboard2.png" width="220"/>
+  <img src="screenshots/DashboardDark.png" width="220"/>
+</p>
+
+---
+
+## 📸 QR Prisustvo i Random Odabir
+
+<p align="center">
+  <img src="screenshots/QRprisustvo.png" width="220"/>
+  <img src="screenshots/RandomPicker.png" width="220"/>
+</p>
+
+---
+
+## 🏆 Live Kvizovi i Rang Liste
+
+<p align="center">
+  <img src="screenshots/LiveQuy.png" width="220"/>
+  <img src="screenshots/RangList.png" width="220"/>
+  <img src="screenshots/E-dnevnik.png" width="220"/>
+</p>
+
+---
+
+## 💬 Feedback & Profil
+
+<p align="center">
+  <img src="screenshots/Feedback.png" width="220"/>
+  <img src="screenshots/profilePage.png" width="220"/>
+  <img src="screenshots/profileDark.png" width="220"/>
+</p>
+
+---
+
+# ✨ Glavne Funkcionalnosti
+
+## 🔐 Registracija i Uloge
+
+Prilikom registracije korisnik bira svoju ulogu unosom pristupnog koda ustanove:
+
+* Profesor → `PROF2026`
+* Student → `STUD2026`
+
+Aplikacija automatski pamti sesiju korisnika i omogućava automatsku prijavu pri ponovnom pokretanju aplikacije.
+
+---
+
+## 📚 Upravljanje Predmetima
+
+### Profesor može:
+
+* kreirati više predmeta,
+* generisati jedinstvene kodove predmeta,
+* brisati predmete,
+* upravljati studentima.
+
+### Student može:
+
+* pridružiti se predmetu putem koda,
+* dodavati nove predmete,
+* pregledati aktivne predmete.
+
+---
+
+## 📸 QR Prisustvo u Realnom Vremenu
+
+Profesor generiše QR kod koji traje 5 minuta.
+
+Student:
+
+* skenira QR kod,
+* potvrđuje prisustvo,
+* automatski dobija evidenciju u sistemu.
+
+Sistem koristi:
+
+* Google ML Kit,
+* Firebase Firestore,
+* vremensku validaciju QR sesije.
+
+---
+
+## 🏆 Live Kvizovi & E-Dnevnik
+
+Profesor može:
+
+* kreirati kvizove,
+* dodavati pitanja i odgovore,
+* pratiti rezultate u realnom vremenu.
+
+Student može:
+
+* rješavati kvizove,
+* pratiti osvojene bodove,
+* pregledati rang listu i rezultate.
+
+### E-Dnevnik omogućava:
+
+* pregled ocjena,
+* statistiku bodova,
+* komentare profesora,
+* pregled prethodnih aktivnosti.
+
+---
+
+## 🤖 Groq AI Asistent
+
+Aplikacija koristi Groq API za AI pomoć studentima tokom učenja.
+
+AI asistent pomaže pri:
+
+* objašnjavanju pojmova,
+* učenju u realnom vremenu,
+* generisanju odgovora i pomoći tokom rada.
+
+---
+
+## 📬 Zadaci, Feedback i Materijali
+
+### Zadaci
+
+Profesor može:
+
+* dodati zadaću,
+* napisati naslov i opis,
+* obrisati zadatak.
+
+### Anonimni Feedback
+
+Student može poslati:
+
+* pohvalu,
+* prijedlog,
+* žalbu.
+
+Feedback ostaje anoniman.
+
+### Materijali
+
+UI za materijale je implementiran i spreman za buduću Firebase Storage integraciju.
+
+---
+
+# 🌙 Dark Mode
+
+Aplikacija podržava:
+
+* Light Mode
+* Dark Mode
+
+Kompletan interfejs automatski se prilagođava tamnoj temi.
+
+---
+
+# 🛠️ Tehnologije i Alati
+
+| Tehnologija             | Opis                   |
+| ----------------------- | ---------------------- |
+| Kotlin                  | Programski jezik       |
+| Jetpack Compose         | Moderni Android UI     |
+| Firebase Firestore      | Cloud baza podataka    |
+| Firebase Authentication | Registracija i prijava |
+| Google ML Kit           | QR skeniranje          |
+| Groq API                | AI Asistent            |
+| Navigation Compose      | Navigacija             |
+| Material 3              | Moderni dizajn         |
+| Coil                    | Učitavanje slika       |
+
+---
+
+# 🧱 Struktura Projekta
+
+```plaintext
+com.example.classroom20
+│
+├── screens
+├── navigation
+├── components
+├── models
+├── firebase
+├── utils
+├── ui.theme
+└── managers
+```
+
+> Projekat trenutno nema potpuno implementiranu MVVM arhitekturu kroz cijeli sistem. Kod je organizovan kroz screenove, helper klase i Firebase managere radi lakšeg održavanja i buduće nadogradnje.
+
+---
+
+# ⚠️ Trenutna Ograničenja
+
+* Google/Facebook login nije potpuno funkcionalan
+* Firebase Storage još nije implementiran
+* Upload fajlova trenutno nema trajno cloud spremanje
+* Profilne slike su samo UI funkcionalnost
+* Materijali trenutno ne povlače stvarne dokumente
+
+---
+
+# ⚙️ Pokretanje Projekta
+
+## 1️⃣ Kloniranje projekta
+
 ```bash
-git clone [https://github.com/AminaHeljaa/ClassRoom-2.0.git](https://github.com/AminaHeljaa/ClassRoom-2.0.git)
-2. Otvorite projekt u Android Studiju
-Pokrenite Android Studio (verzija Ladybug ili novija).
+git clone https://github.com/AminaHeljaa/ClassRoom-2.0.git
+```
 
-Izaberite opciju Open i pronađite folder projekta koji ste upravo klonirali (ClassRoom20).
+---
 
-Sačekajte par minuta da se završi sinhronizacija i indeksiranje projekta (Gradle Sync).
+## 2️⃣ Otvaranje u Android Studiju
 
-3. Podešavanje Firebase Konfiguracije
-Budući da se aplikacija oslanja na Firebase za bazu podataka i autentifikaciju, potrebno je da povezujete sopstveni Firebase projekt:
+* Android Studio Ladybug ili noviji
+* Open Project
+* Sačekati Gradle Sync
 
-Otvorite Firebase Konzolu i kreirajte novi projekt.
+---
 
-Dodajte Android aplikaciju u okviru projekta (unesite vaš paket name, npr. com.example.classroom20).
+## 3️⃣ Firebase konfiguracija
 
-Preuzmite konfiguracijsku datoteku google-services.json.
+Potrebno je:
 
-Kopirajte preuzeti fajl i zalijepite ga direktno u app/ direktorij vašeg projekta unutar Android Studija.
+* kreirati Firebase projekat,
+* dodati Android aplikaciju,
+* preuzeti `google-services.json`,
+* ubaciti fajl u `app/` folder.
 
-U okviru Firebase konzole, ručno omogućite sljedeće usluge:
+### Omogućiti:
 
-Authentication: Uključite Email/Password metodu prijave.
+* Firebase Authentication
+* Firestore Database
 
-Firestore Database: Pokrenite bazu podataka u testnom režimu.
+---
 
-4. Pokretanje na uređaju
-Omogućite USB Debugging na svom stvarnom Android uređaju i povežite ga kablom sa računarom, ili pokrenite virtuelni uređaj (Emulator) u Android Studiju.
+## 4️⃣ Pokretanje aplikacije
 
-Kliknite na zeleno dugme Run (Pusti) u gornjoj alatnoj traci Android Studija (zeleni trougao ▶).
+* Pokrenuti emulator ili fizički uređaj
+* Kliknuti ▶ Run
 
-Pristup aplikaciji: Prilikom prve registracije na ekranu, unesi kod ustanove kako bi aplikacija prepoznala tvoju ulogu:
+### Kodovi za registraciju:
 
-Za profesorski nalog koristi kod: PROF2026
+* Profesor → `PROF2026`
+* Student → `STUD2026`
 
-Za studentski nalog koristi kod: STUD2026
+---
+
+# 🔮 Buduće Nadogradnje
+
+Planirane funkcionalnosti:
+
+* Firebase Storage integracija
+* Upload PDF i PowerPoint materijala
+* Push notifikacije
+* Potpuna MVVM arhitektura
+* Google/Facebook autentifikacija
+* Statistika prisustva
+* Napredniji AI tutor sistem
+
+---
+
+# 👩‍💻 Autor
+
+Razvila:
+
+### **Amina Helja**
+
+Android aplikacija razvijena kao projekat koristeći:
+
+* Kotlin
+* Jetpack Compose
+* Firebase
+* Groq AI Integraciju
+
+---
+
+# 📄 Licenca
+
+MIT License
